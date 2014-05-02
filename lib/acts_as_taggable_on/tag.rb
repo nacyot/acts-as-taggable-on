@@ -2,6 +2,8 @@
 module ActsAsTaggableOn
   #  class Tag < ::ActiveRecord::Base
   class Tag < ::Dish::Database
+    self.table_name = :tags
+    
     extend ActsAsTaggableOn::Utils
 
     attr_accessible :name if defined?(ActiveModel::MassAssignmentSecurity)

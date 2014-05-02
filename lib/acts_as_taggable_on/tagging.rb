@@ -1,6 +1,8 @@
 module ActsAsTaggableOn
   #  class Tagging < ::ActiveRecord::Base #:nodoc:
   class Tagging < ::Dish::Database #:nodoc:
+    self.table_name = :taggings
+    
     #TODO, remove from 4.0.0
     attr_accessible :tag,
                     :tag_id,
