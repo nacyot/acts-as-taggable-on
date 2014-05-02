@@ -1,6 +1,7 @@
 # coding: utf-8
 module ActsAsTaggableOn
-  class Tag < ::ActiveRecord::Base
+  #  class Tag < ::ActiveRecord::Base
+  class Tag < ::Dish::Database
     extend ActsAsTaggableOn::Utils
 
     attr_accessible :name if defined?(ActiveModel::MassAssignmentSecurity)
