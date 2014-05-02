@@ -2,10 +2,6 @@ module ActsAsTaggableOn
   module Utils
     extend self
 
-    def connection
-      ::ActiveRecord::Base.connection
-    end
-
     def using_postgresql?
       connection && connection.adapter_name == 'PostgreSQL'
     end
